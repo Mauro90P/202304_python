@@ -10,6 +10,11 @@ app = Flask(__name__)
 def hola_mundo():
     return 'Hola Mundo!'           # Devuelve la cadena '¡Hola Mundo!' como respuesta
 
+
+if __name__ == "__main__":        # Asegúrate de que este archivo se esté ejecutando directamente y no desde un módulo diferente
+    # Ejecuta la aplicación en modo de depuración
+    app.run(debug=True)
+
 """ @app.reoute('/hello/<string:banana>/<int:num>')
 def hello(banana, num):
     return f"Hello{banana * num}"
@@ -26,7 +31,4 @@ def hola(name):
     print(name)
     return "Hola, " + name
 
-if __name__ == "__main__":        # Asegúrate de que este archivo se esté ejecutando directamente y no desde un módulo diferente
-    # Ejecuta la aplicación en modo de depuración
-    app.run(debug=True)
  """
