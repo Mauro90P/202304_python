@@ -1,0 +1,32 @@
+#Asignación: Usuarios
+
+
+USE usuarios_new;
+
+SELECT * FROM users;
+
+INSERT INTO users (first_name, last_name, email, created_at, updated_at)
+VALUES ('JUAN', 'PEREZ','JUAN@GMAIL.COM', NOW(),NOW())
+	  ,('PEDRO', 'LOPEZ','PEDRO@GMAIL.COM', NOW(),NOW())
+      ,('RAMON', 'LEAL','RAMON@GMAIL.COM', NOW(),NOW());
+      
+SELECT * FROM users;
+
+
+SELECT email
+FROM users
+WHERE id = 1;
+
+SELECT * FROM users 
+WHERE id = 3 ORDER BY id DESC;
+
+UPDATE users 
+SET last_name = 'Panqueques'
+WHERE id = 3;
+
+DELETE  FROM users 
+WHERE id = 2;
+
+SELECT first_name
+FROM users
+ORDER BY first_name
