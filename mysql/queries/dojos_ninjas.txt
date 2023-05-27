@@ -1,0 +1,36 @@
+#Dojos y Ninjas
+
+USE DOJO_NINJAS;
+
+SELECT * FROM dojos;
+
+SELECT * FROM ninjas;
+
+INSERT INTO dojos (name,created_at, updated_at)
+VALUES ('DojoManuel',NOW(),NOW()),('DojoJose2',NOW(),NOW()),('DojoRuben3',NOW(),NOW());
+
+
+DELETE FROM dojos
+WHERE id IN (1,2,3);
+
+INSERT INTO dojos (name,created_at, updated_at)
+VALUES ('DojoManuel1',NOW(),NOW()),('DojoVero2',NOW(),NOW()),('DojoFrancisco3',NOW(),NOW());
+
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at,dojos_id)
+VALUES ('JUAN','LOPEZ',34,NOW(),NOW(),4),('HELENA','PARDO',15,NOW(),NOW(),4),('LUCI','RUIZ',20,NOW(),NOW(),4);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at,dojos_id)
+VALUES ('BERNARDO','JEREZ',30,NOW(),NOW(),5),('KARLA','ROJAS',18,NOW(),NOW(),5),('ANDREA','JERIA',28,NOW(),NOW(),5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at,dojos_id)
+VALUES ('COTY','FREDEZ',16,NOW(),NOW(),6),('MARCELA','GALLARDO',13,NOW(),NOW(),6),('GABY','CID',17,NOW(),NOW(),6);
+
+#Consulta: recupera todos los ninjas del primer dojo
+SELECT * FROM ninjas
+WHERE dojos_id in (6);
+
+#Consulta: recupera el dojo del último ninja
+
+SELECT * FROM ninjas
+WHERE dojos_id in (6) AND id = (9);
