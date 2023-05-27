@@ -1,0 +1,16 @@
+# CONSULTAS DE BD "Configuración de MySQL Workbench"
+
+USE twitter; # Usando BD
+
+SELECT * FROM users; # SELECT DE UNA TABLA USERS
+
+INSERT INTO 
+           users (first_name,last_name, handle, created_at, updated_at)
+VALUES 
+           ("ROBERTO", "PARDO", "MAURICIOPARDO" , NOW(), NOW()); #Insertando un nuevo registro en la columna
+UPDATE twitter.users SET 
+handle = "ROBERTOPARDO"
+WHERE id = 7; # Se actualiza un registro de la columna.
+
+DELETE FROM users 
+WHERE id = 6; # Esto eliminara toda la fila de tabla con el registro
