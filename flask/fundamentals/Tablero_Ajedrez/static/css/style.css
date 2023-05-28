@@ -1,0 +1,45 @@
+* {
+    margin: o;
+    padding: 0;
+    /* outline: 1px solid red;*/
+}
+
+
+body {
+    display: block;
+    margin: 8px;
+    background-color: aliceblue;
+}
+
+h1 {
+    color: rgb(1, 1, 11);
+    display: flex;
+    justify-content: center;
+}
+
+
+.container {
+    background-color: rgb(246, 238, 238);
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.color1 {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+
+.color2 {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+}
+
+.container1 {
+    margin: 0 auto 30px;
+}
