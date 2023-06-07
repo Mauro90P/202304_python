@@ -1,0 +1,28 @@
+{% extends "index.html"%}
+{%block titulo%} Tabla HTML {% endblock %}
+
+{% block contenido%}
+<h1 style="text-align: center">Fomulario de Usuarios</h1>
+
+<div style="justify-content: center;" class="contenedor">
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Nombre completo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for user in usuarios%}
+            <tr>
+                <td>{{user.nombre}}</td>
+                <td>{{user.apellido}}</td>
+                <td>{{user.nombre}} {{user.apellido}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{%endblock%}
