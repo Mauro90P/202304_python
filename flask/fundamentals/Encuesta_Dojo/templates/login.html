@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block titulo %}Bienvenidos al Login{% endblock %}
+
+{% block contenido %}
+<h1>Encuesta Dojo</h1>
+
+<div class="row mt-4">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <form action="/procesar_login" method="post">
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" aria-describedby="emailHelp"
+                    name="name">
+                <div id="emailHelp" class="form-text">Ingresar nombre completo.</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="my-1 mr-2" for="disabledSelect">Ubicacion:</label>
+                <select class="form-control" id="disabledSelect" name="ubicacion">
+                    <option selected>--Seleccione Ubicacion--</option>
+                    <option>Santiago</option>
+                    <option>Maipu</option>
+                    <option>Renca</option>
+                    <option>Las Condes</option>
+                    <option>La Pintana</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="my-1 mr-2" for="disabledSelect">Lenguaje Favorito:</label>
+                <select class="form-control" id="disabledSelect" name="lenguaje">
+                    <option selected>--Seleccione su Lenguaje--</option>
+                    <option>Pyhton</option>
+                    <option>C++</option>
+                    <option>C#</option>
+                    <option>Rubi</option>
+                    <option>SQL</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1">Comentarios:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comentario"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+    </form>
+</div>
+
+
+{% endblock %}

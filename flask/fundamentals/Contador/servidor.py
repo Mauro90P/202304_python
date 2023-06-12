@@ -21,7 +21,7 @@ def sumar():
 @app.route('/reset')
 def reset():
     global contador
-    contador = 0
+    contador = 1
     return str(contador)
 
 

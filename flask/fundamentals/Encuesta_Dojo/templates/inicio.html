@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %}Bienvenidos al Sistema{% endblock %}
+
+{% block contenido %}
+<div class="card text-bg-primary mb-5">
+    <div class="card-header text-center">Resultado del Registro</div>
+    <div class="card-body">
+        <p> Tu nombre es: {{usuario ['nombre']}}</p>
+        <p>Tu ubicacion es: {{ usuario['ubicacion'] }}</p>
+        <p>Tu lenguaje favorito es: {{ usuario['lenguaje'] }}</p>
+        <p>Tu comentario es: {{ usuario['comentario'] }}</p>
+    </div>
+    <div class="d-flex" role="search">
+        <a class="btn btn-outline-success" href="/salir">Home</a>
+    </div>
+</div>
+{% endblock %}

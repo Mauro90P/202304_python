@@ -1,0 +1,8 @@
+.d-flex {
+    display: flexbox;
+    justify-content: center;
+    background-color: rgb(17, 17, 16);
+    border-bottom-color: rgb(253, 253, 253);
+    border-bottom: 4px;
+    color: rgb(254, 254, 248);
+}
